@@ -6,7 +6,7 @@
   "main": "index.cjs",
   "module": "index.js",
   "bin": {
-    "date-fns-mcp": "./bin.js"
+    "date-fns-mcp": "./src/bin.ts"
   },
   "exports": {
     "./package.json": "./package.json",
@@ -46,5 +46,9 @@
     "@types/node": "^20.19.9",
     "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "zod": "^4.0.17"
+  }
 }

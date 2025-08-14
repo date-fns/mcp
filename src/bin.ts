@@ -1,3 +1,11 @@
 #!/usr/bin/env node
 
-console.log("Hello, cruel world!");
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { server } from "./server.ts";
+import "./tools/list.ts";
+
+const transport = new StdioServerTransport();
+
+await server.connect(transport);
+
+console.log("⭐️ date-fns MCP Server running on stdio");
