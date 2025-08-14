@@ -1,0 +1,50 @@
+{
+  "name": "@date-fns/mcp",
+  "version": "0.1.0",
+  "description": "date-fns documentation MCP",
+  "type": "module",
+  "main": "index.cjs",
+  "module": "index.js",
+  "bin": {
+    "date-fns-mcp": "./bin.js"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./src/index.ts"
+  },
+  "publishConfig": {
+    "main": "index.cjs",
+    "module": "index.js",
+    "bin": {
+      "date-fns-mcp": "./bin.js"
+    },
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "require": {
+          "types": "./index.d.cts",
+          "default": "./index.cjs"
+        },
+        "import": {
+          "types": "./index.d.ts",
+          "default": "./index.js"
+        }
+      }
+    }
+  },
+  "author": "Sasha Koss <koss@nocorp.me>",
+  "license": "MIT",
+  "keywords": [
+    "date-fns",
+    "MCP",
+    "AI"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.9",
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "pnpm@10.14.0"
+}
